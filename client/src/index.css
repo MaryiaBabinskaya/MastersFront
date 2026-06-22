@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 44 21% 94%;
+        --foreground: 24 9% 10%;
+        --card: 44 21% 97%;
+        --card-foreground: 24 9% 10%;
+        --popover: 44 21% 97%;
+        --popover-foreground: 24 9% 10%;
+        --primary: 15 80% 25%;
+        --primary-foreground: 44 21% 97%;
+        --secondary: 43 13% 85%;
+        --secondary-foreground: 24 9% 20%;
+        --muted: 43 13% 88%;
+        --muted-foreground: 24 6% 46%;
+        --accent: 45 100% 51%;
+        --accent-foreground: 24 9% 10%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 44 21% 97%;
+        --border: 43 13% 82%;
+        --input: 43 13% 82%;
+        --ring: 15 80% 25%;
+        --radius: 0.5rem;
+        --velvet-red: 0 60% 35%;
+        --velvet-red-dark: 0 60% 28%;
+        --gold-frame: 45 100% 51%;
+        --gold-frame-dark: 45 65% 45%;
+        --cream-paper: 44 21% 94%;
+        --cream-light: 44 21% 97%;
+        --brown-text: 24 9% 10%;
+        --brown-muted: 24 6% 46%;
+        --font-sans: 'Lato', ui-sans-serif, system-ui, sans-serif;
+        --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+        --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    .dark {
+        --background: 24 9% 6%;
+        --foreground: 44 21% 94%;
+        --card: 24 9% 10%;
+        --card-foreground: 44 21% 94%;
+        --popover: 24 9% 10%;
+        --popover-foreground: 44 21% 94%;
+        --primary: 15 80% 35%;
+        --primary-foreground: 44 21% 97%;
+        --secondary: 24 6% 15%;
+        --secondary-foreground: 44 21% 94%;
+        --muted: 24 6% 15%;
+        --muted-foreground: 43 13% 65%;
+        --accent: 45 100% 65%;
+        --accent-foreground: 24 9% 8%;
+        --border: 24 6% 20%;
+        --input: 24 6% 20%;
+        --ring: 15 80% 35%;
+    }
+
+    @layer base {
+        * {
+            @apply border-border;
+        }
+        body {
+            @apply text-foreground font-sans;
+            font-feature-settings: "rlig" 1, "calt" 1;
+            background:
+                radial-gradient(circle at 25% 25%, hsl(var(--cream-light)) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, hsl(var(--cream-light)) 0%, transparent 50%),
+                hsl(var(--background));
+        }
+    }
+
+    .gold-frame {
+        position: relative;
+        border: 8px solid transparent;
+        border-radius: 16px;
+        background:
+            linear-gradient(white, white) padding-box,
+            linear-gradient(
+                135deg,
+                #d4af37 0%,
+                #f4e5c3 15%,
+                #d4af37 30%,
+                #c9a961 45%,
+                #f4e5c3 50%,
+                #c9a961 55%,
+                #d4af37 70%,
+                #f4e5c3 85%,
+                #d4af37 100%
+            ) border-box;
+        box-shadow:
+            0 8px 32px rgba(218, 165, 32, 0.4),
+            inset 0 2px 8px rgba(255, 255, 255, 0.4),
+            inset 0 -2px 8px rgba(139, 90, 43, 0.4),
+            inset 0 0 1px rgba(212, 175, 55, 0.8);
+    }
+
+    .gold-frame::before {
+        content: '';
+        position: absolute;
+        inset: -8px;
+        border-radius: 16px;
+        padding: 8px;
+        background: linear-gradient(
+            45deg,
+            transparent 0%,
+            rgba(255, 215, 0, 0.3) 25%,
+            transparent 50%,
+            rgba(255, 215, 0, 0.3) 75%,
+            transparent 100%
+        );
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    .gold-frame > * {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .btn-theater {
+        @apply relative overflow-hidden;
+        background: linear-gradient(
+            135deg,
+            hsl(var(--velvet-red)) 0%,
+            hsl(var(--velvet-red-dark)) 100%
+        );
+        border: 2px solid hsl(var(--gold-frame));
+        color: hsl(var(--primary-foreground));
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .btn-theater:hover {
+        background: linear-gradient(
+            135deg,
+            hsl(var(--velvet-red-dark)) 0%,
+            hsl(var(--velvet-red)) 100%
+        );
+        box-shadow: 0 0 20px rgba(218, 165, 32, 0.4);
+        transform: translateY(-1px);
+    }
+
+    .btn-theater::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+        );
+        transition: left 0.5s;
+    }
+
+    .btn-theater:hover::before {
+        left: 100%;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+}

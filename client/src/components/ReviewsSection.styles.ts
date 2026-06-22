@@ -1,0 +1,18 @@
+export const s = {
+  wrapper: "bg-white p-8 rounded-sm border border-stone-200 shadow-md",
+  title: "font-serif font-bold text-2xl text-primary mb-6 border-b-2 border-stone-200 pb-3 flex items-center gap-2",
+  formWrapper: "mb-8",
+  formRow: "flex gap-3 mb-3",
+  avatarWrapper: "w-10 h-10 rounded-full overflow-hidden border border-yellow-600/30 bg-primary shrink-0",
+  avatarImg: "w-full h-full object-cover",
+  avatarImgDefault: "scale-[2] translate-x-0.5 translate-y-1.5",
+  formField: "flex-1",
+  textarea: "min-h-[120px] border-stone-300 focus:ring-yellow-500",
+  loginPrompt: "mb-8 p-4 bg-stone-50 rounded border border-stone-200 text-center",
+  loginText: "text-stone-600",
+  loginLink: "text-primary hover:underline font-semibold",
+  loadingWrapper: "flex items-center justify-center py-8",
+  reviewsList: "space-y-4",
+  emptyWrapper: "text-center py-8 text-stone-500",
+  emptyIcon: "w-12 h-12 mx-auto mb-3 opacity-50",
+} as const;
