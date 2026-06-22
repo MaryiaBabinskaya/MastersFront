@@ -85,3 +85,32 @@ The app runs on `http://localhost:5001`.
 npm run build
 npm start
 ```
+
+Example how "Repertuar" section looks like
+<img width="1119" height="683" alt="image" src="https://github.com/user-attachments/assets/52e8d139-cbb1-436c-9190-389055be2e78" />
+<img width="1056" height="715" alt="image" src="https://github.com/user-attachments/assets/7f5d7711-c633-4e3c-806b-5c40a618ddd2" />
+<img width="1133" height="723" alt="image" src="https://github.com/user-attachments/assets/7a67bf2c-e560-4d9f-af9d-667d0aacccf8" />
+
+"Kalendarz"
+<img width="1051" height="751" alt="image" src="https://github.com/user-attachments/assets/4e236831-337b-4660-9351-93e9f80939d3" />
+
+"Teatralna plotka"
+<img width="1050" height="750" alt="image" src="https://github.com/user-attachments/assets/fe83eadc-f181-4ce9-9cf5-ba52034996d9" />
+
+"Account"
+<img width="1096" height="563" alt="image" src="https://github.com/user-attachments/assets/df2ae8ce-09c8-4719-861f-3dd3cf3d2ec0" />
+
+"PLay details"
+<img width="1011" height="788" alt="image" src="https://github.com/user-attachments/assets/bbaf9822-3d1f-489e-98fe-5995ff0fb717" />
+<img width="890" height="535" alt="image" src="https://github.com/user-attachments/assets/23519e71-5c32-4662-afc5-d77613237e4d" />
+<img width="1052" height="694" alt="image" src="https://github.com/user-attachments/assets/b8a0a5b3-3b35-4168-8f3e-b56296b2d996" />
+
+
+
+
+
+
+
+
+
+
