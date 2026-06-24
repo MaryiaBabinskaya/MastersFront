@@ -564,7 +564,6 @@ export async function registerRoutes(
                 return res.status(404).json({ message: 'Play not found' });
             }
 
-            // Use the source URL as the playId for Spring Boot backend
             const backendPlayId: any = targetPlay.source || targetPlay.title;
 
             const favoritesResponse: Response = await fetch(
@@ -575,7 +574,7 @@ export async function registerRoutes(
             if (favoritesResponse.ok) {
                 const currentFavorites: any = await favoritesResponse.json();
                 isFavorited = currentFavorites.some((fav: any) =>
-                    fav.source === backendPlayId || fav.title === targetPlay.title
+                    fav.source === backendPlayId && fav.title === targetPlay.title
                 );
             } else if (favoritesResponse.status === 404) {
                 isFavorited = false;

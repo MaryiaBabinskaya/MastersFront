@@ -232,6 +232,9 @@ export default function Account() {
                                     className={s.formInput}
                                     disabled={isLoggingIn || isRegistering}
                                 />
+                                {!isLogin && password.length > 0 && password.length < 6 && (
+                                    <p className="text-xs text-red-500 mt-1">Hasło musi mieć minimum 6 znaków.</p>
+                                )}
                             </div>
 
                             <div className={s.formActions}>

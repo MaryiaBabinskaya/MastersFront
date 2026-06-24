@@ -8,6 +8,6 @@ export function getPlayFallback(theaterName: string): string {
 }
 
 export function getPlayPosterSrc(imageUrl: string | null | undefined, theaterName: string): string {
-    const hasRealImage = imageUrl && !imageUrl.includes('default_photo');
+    const hasRealImage = imageUrl && !imageUrl.includes('default_photo') && !imageUrl.includes('placeholder.co');
     return hasRealImage ? imageUrl : getPlayFallback(theaterName);
 }

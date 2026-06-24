@@ -57,7 +57,7 @@ function getTheaterUrl(theaterName: string, fallbackUrl: string): string {
     if (name.includes("groteska")) return "https://www.groteska.pl/";
     if (name.includes("stary")) return "https://stary.pl/";
     if (name.includes("słowacki") || name.includes("slowacki") || name.includes("teatr w krakowie")) return "https://teatrwkrakowie.pl/";
-    if (name.includes("akademicki") || name.includes("studencki") || name.includes("ast kraków")) return "https://krakow.ast.krakow.pl/";
+    if (name.includes("akademicki") || name.includes("studencki") || name.includes("ast kraków") || name.includes(" ast") || name === "ast") return "https://krakow.ast.krakow.pl/teatr-ast/repertuar/";
     if (name.includes("łaźnia") || name.includes("laznia")) return "https://www.laznianowa.pl/";
     if (name.includes("nowy") || name.includes("proxima")) return "https://teatrnowy.com.pl/";
     if (name.includes("stu")) return "https://scenastu.pl/";
