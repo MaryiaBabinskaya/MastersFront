@@ -38,7 +38,11 @@ export const useCurtainNavigation = () => {
 };
 
 export function CurtainTransition({ children }: { children: ReactNode }) {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const [isClosed, setIsClosed] = useState(false);
   const { user } = useAuth();
 
